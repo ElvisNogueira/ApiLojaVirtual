@@ -21,8 +21,8 @@ public class Cliente {
 	private Long id;
 	
 	private String nome, email;
-	private Date data_nascimento;
-	private String cpf,telefone, login, senha;
+	private String data_nascimento;
+	private String cpf,telefone, senha;
 	@OneToOne
 	private Endereco endereco;
 	@OneToMany
@@ -30,7 +30,7 @@ public class Cliente {
 	
 	
 
-	public Cliente(Long id, String nome, String email, Date data_nascimento, String cpf, String telefone, String login,
+	public Cliente(Long id, String nome, String email, String data_nascimento, String cpf, String telefone,
 			String senha, Endereco endereco, List<Venda> vendas) {
 		super();
 		this.id = id;
@@ -39,7 +39,6 @@ public class Cliente {
 		this.data_nascimento = data_nascimento;
 		this.cpf = cpf;
 		this.telefone = telefone;
-		this.login = login;
 		this.senha = senha;
 		this.endereco = endereco;
 		this.vendas = vendas;
@@ -89,11 +88,11 @@ public class Cliente {
 		this.email = email;
 	}
 
-	public Date getData_nascimento() {
+	public String getData_nascimento() {
 		return data_nascimento;
 	}
 
-	public void setData_nascimento(Date data_nascimento) {
+	public void setData_nascimento(String data_nascimento) {
 		this.data_nascimento = data_nascimento;
 	}
 
@@ -113,14 +112,6 @@ public class Cliente {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
-	}
-
-	public String getLogin() {
-		return login;
-	}
-
-	public void setLogin(String login) {
-		this.login = login;
 	}
 
 	public String getSenha() {

@@ -34,9 +34,9 @@ public class ClienteController {
 		return repository.findById(id).get();
 	}
 	
-	@GetMapping("/cliente/{login}/{senha}")
-	public Cliente login(@PathVariable("login") String login, @PathVariable("senha") String senha) {
-		return repository.findByLoginAndSenha(login, senha).get();
+	@GetMapping("/cliente/{email}/{senha}")
+	public Cliente login(@PathVariable("email") String email, @PathVariable("senha") String senha) {
+		return repository.findByEmailAndSenha(email, senha).get();
 	}
 	
 	@PostMapping("/cliente")

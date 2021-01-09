@@ -10,5 +10,5 @@ import com.api.model.Produto;
 
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
-	public Optional<Cliente> findByLoginAndSenha(String login, String senha);
+	public Optional<Cliente> findByEmailAndSenha(String login, String senha);
 }

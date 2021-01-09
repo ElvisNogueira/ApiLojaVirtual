@@ -14,6 +14,7 @@ public class Endereco {
 	
 	public Endereco(Long id, String estado, String cidade, String bairro, String rua, String cep, String numero) {
 		super();
+		System.err.println("Controler");
 		this.id = id;
 		this.estado = estado;
 		this.cidade = cidade;
@@ -25,6 +26,7 @@ public class Endereco {
 
 	public Endereco() {
 		super();
+		System.err.println("Controler 2");
 	}
 
 	public Long getId() {
