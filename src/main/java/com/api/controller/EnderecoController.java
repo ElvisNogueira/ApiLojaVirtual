@@ -21,10 +21,10 @@ import com.api.repository.EnderecoRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
+@CrossOrigin(maxAge = 3600)
 @RestController
 @RequestMapping("/api")
 @Api(value = "API REST ENDERECO")
-@CrossOrigin(origins="*")
 public class EnderecoController {
 	@Autowired
 	public EnderecoRepository enderecoRepository;
