@@ -9,14 +9,14 @@ import javax.persistence.Id;
 public class Produto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private int id;
 	private String nome, descricao, tamanho;
 	private double valor;
 	private String categoria;
 	private double desconto;
 	private String imagem_url;
 
-	public Produto(Long id, String nome, String descricao, String tamanho, double valor, String categoria,
+	public Produto(int id, String nome, String descricao, String tamanho, double valor, String categoria,
 			double desconto, String imagem_url) {
 		super();
 		this.id = id;
@@ -35,12 +35,12 @@ public class Produto {
 	}
 
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

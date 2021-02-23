@@ -18,7 +18,7 @@ import javax.persistence.OneToOne;
 public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private int id;
 	
 	private String nome, email;
 	private String data_nascimento;
@@ -30,7 +30,7 @@ public class Cliente {
 	
 	
 
-	public Cliente(Long id, String nome, String email, String data_nascimento, String cpf, String telefone,
+	public Cliente(int id, String nome, String email, String data_nascimento, String cpf, String telefone,
 			String senha, Endereco endereco, List<Venda> vendas) {
 		super();
 		this.id = id;
@@ -64,11 +64,11 @@ public class Cliente {
 		super();
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

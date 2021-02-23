@@ -32,7 +32,7 @@ public class ProdutoController {
 	}
 	
 	@GetMapping("/produto/{id}")
-	public Produto view(@PathVariable("id") Long id) {
+	public Produto view(@PathVariable("id") int id) {
 		return pr.findById(id).get();
 	}
 	
@@ -45,13 +45,14 @@ public class ProdutoController {
 	}
 	
 	@DeleteMapping("/produto/delete/{id}")
-	public void delete(@PathVariable("id") Long id) {
+	public void delete(@PathVariable("id") int id) {
 		Produto produto = pr.findById(id).get();
 		pr.delete(produto);
 	}
 	
 	@PutMapping("/produto")
 	public Produto update(@RequestBody Produto produto) {
+		System.out.println(produto.getId());
 		return pr.save(produto);
 	}
 }
